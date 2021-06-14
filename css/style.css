@@ -39,9 +39,19 @@ h4 a:hover{
     color: var(--colorS);
     text-decoration: none;
 }
+main img{
+    width: 70vw;
+    transition-property: transform;
+    transition-duration: 0.7s;
+}
+main img:hover{
+    transform: scale(1.2);
+}
+
 span{
     font-size: 2.5rem;
 }
+
 input, textarea {
     margin-left: 10px;
     margin-top: 20px;
@@ -86,7 +96,14 @@ header{
 }
 #nav-logo img{
     width: 200px;
+    transition-property: transform;
+    transition-duration: 0.7s;
 }
+#nav-logo img:hover{
+    transform: scale(1.2);
+   
+}
+
 nav a{
     font-size: 2rem;
 }
