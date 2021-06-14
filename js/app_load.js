@@ -56,7 +56,3 @@ function updateDatabase(){
   
 }
 
-heroes.push(new Hero('TONY STARK', 'IRON MAN','SUPERSONIC FLIGHT' , 'AVENGERS', 'https://i.pinimg.com/originals/87/d8/ec/87d8ec9aa24ca9a61584010cdfe21a14.png'))
-      localStorage.setItem('heroes',JSON.stringify(heroes))
-      heroes.push(new Hero('STEVE ROGERS', 'CAPTAIN AMERICA','ENHANCED STRENGHT' , 'AVENGERS', 'https://static.wikia.nocookie.net/disney/images/f/fa/Captain-America-AOU-Render.png'))
-      localStorage.setItem('heroes',JSON.stringify(heroes))
