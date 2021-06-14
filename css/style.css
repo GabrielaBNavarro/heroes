@@ -1,0 +1,104 @@
+:root {
+    --colorP: rgb(218, 7, 7);
+    --colorS: rgb(0, 255, 179);
+    --colorT: rgb(14, 217, 224); 
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: red;
+    margin-top: 130px;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 0.1rem;
+}
+h2{
+    font-size: 6rem; 
+}
+h3{
+    font-size: 5rem; 
+}
+h4{
+    font-size: 3rem; 
+}
+h4 a{
+    color: var(--colorT);
+}
+h4 a:hover{
+    color: var(--colorS);
+    text-decoration: none;
+}
+span{
+    font-size: 2.5rem;
+}
+input, textarea {
+    margin-left: 10px;
+    margin-top: 20px;
+    border: 3px solid var(--colorS);
+    border-radius: 4px;
+    width: 200px;
+    height: 30px;
+    font-size: 2.3rem;
+  }
+
+textarea{
+margin-bottom: -30px;
+resize: none;
+height: 50px;
+}
+header{
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    
+}
+::placeholder{
+    font-size: 1.6rem;
+    opacity: 0.8;
+}
+#headerH{
+    background-color: var(--colorP);
+}
+#sendHero{
+    width: 150px;
+    height: 50px;
+    font-size: 2rem;
+    background-color: black;
+    color: var(--colorS);
+    border-radius: 4px;
+    border: 3px solid var(--colorT);
+}
+#sendHero:hover{
+    background-color: var(--colorT);
+    color: white;
+}
+#nav-logo img{
+    width: 200px;
+}
+nav a{
+    font-size: 2rem;
+}
+th{
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;;
+}
+td{
+    color: white;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+}
+td img{
+    height: 250px;
+}
