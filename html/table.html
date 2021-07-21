@@ -23,7 +23,7 @@
     <header id="headerH">
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container">
-          <a class="navbar-brand font-weight-bold" id="nav-logo" href="/index.html"><img src="/img/logo.png" alt="superheroes logo"></a>
+          <a class="navbar-brand font-weight-bold" id="nav-logo" href="/html/home.html"><img src="/img/logo.png" alt="superheroes logo"></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -41,7 +41,7 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/index.html"
+                <a class="nav-link" href="/html/home.html"
                   >Home <span class="sr-only"></span></a
                 >
               </li>
@@ -57,24 +57,173 @@
       </nav>
     </header>
     <main>
-        
-      <table class="table">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col">  
+      <table class="table table-striped">
         <thead class="thead-dark">
           <tr class="text-center">
-            <th scope="col ">Name</th>
-            <th scope="col ">Alias</th>
-            <th scope="col ">Superpower</th>
-            <th scope="col ">Team</th>
-            <th scope="col ">Image</th>
+            <th scope="col col-md-2 ">Name</th>
+            <th scope="col col-md-2  ">Alias</th>
+            <th scope="col col-md-2  ">Superpower</th>
+            <th scope="col col-md-2  ">Team</th>
+            <th scope="col col-md-3  ">Options</th>
+            
+            
           </tr>
         </thead>
-        <tbody id="tableBody"></tbody>
+        <tbody class="table-hover" id="tableBody"></tbody>
       </table>
+          </div>
+        </div>
+      </div>
+      
     </main>
+
+    <div
+      class="modal fade"
+      id="heroModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" id="heroModalD">
+        <div class="modal-content" id="heroModalCo">
+          <div class="modal-header text-center" id="heroModalH">
+            <h4 class="modal-title text-center" id="title-modal"></h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="heroModalB">
+            
+           
+              <div class="row no-gutters "></div>
+                <div class="col-md-4">
+                  <img id="hero-img" class="img-fluid" src="" alt="imagen" />
+                </div>
+                <div class=" offset-1 col-md-10">
+                  
+                    <h4 class="hero-title"></h4>
+                    <p class="text-center">
+                      <strong class="tags">SUPERPOWER: </strong><span id="text-superpower"></span>
+                    </p>
+                    <p class="text-center">
+                      <strong class="tags">TEAM: </strong><span id="text-team"></span>
+                    </p>
+                  </div>
+                </div>
+              
+           
+         
+          <div class="modal-footer" id="heroModalF">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+ <!--end infohero modal-->
+
+     <!--hero modify modal-->
+     <div
+     class="modal fade"
+     id="modifModal"
+     tabindex="-1"
+     aria-labelledby="exampleModalLabel"
+     aria-hidden="true"
+   >
+     <div class="modal-dialog">
+       <div class="modal-content" id="modifModalCo">
+         <div class="modal-header" id="modifModalH">
+           <h5 class="modal-title" id="modif_title">Modal title</h5>
+           <button
+             type="button"
+             class="close"
+             data-dismiss="modal"
+             aria-label="Close"
+           >
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>
+         <div class="modal-body " id="modifModalB" >
+           <form onsubmit="updateHero(event)">
+             <div class="form-group">
+               <label>Nombre</label>
+               <input
+                 type="text"
+                 class="form-control"
+                 id="nameModif"
+                 name="nombre"
+                 onchange="handleChange(event)"
+               />
+             </div>
+             <div class="form-group">
+               <label>Poder</label>
+               <input
+                 type="text"
+                 class="form-control"
+                 id="superpowerModif"
+                 name="poder"
+                 onchange="handleChange(event)"
+               />
+             </div>
+             <div class="form-group">
+               <label>Equipo</label>
+               <input
+                 type="text"
+                 class="form-control"
+                 id="teamModif"
+                 name="equipo"
+                 onchange="handleChange(event)"
+               />
+             </div>
+             <div class="form-group">
+               <label>Imagen</label>
+               <input
+                 type="text"
+                 class="form-control"
+                 id="imageModif"
+                 name="imagen"
+                 onchange="handleChange(event)"
+               />
+             </div>
+
+             <button class="btn btn-danger btn-block" id="modifBtn">Actualizar</button>
+           </form>
+         </div>
+         <div class="modal-footer" id="modifModalF" >
+           <!-- <button
+             type="button"
+             class="btn btn-secondary"
+             data-dismiss="modal"
+           >
+             Close
+           </button>
+           <button type="button" class="btn btn-primary">Save changes</button> -->
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <!--modal end-->
     <footer>
 
     </footer>
+
 <script src="/js/app_table.js"></script>
+<script src="https://use.fontawesome.com/a79dcfd0b0.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

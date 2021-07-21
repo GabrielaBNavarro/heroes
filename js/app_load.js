@@ -12,15 +12,17 @@ class Hero {
     }
   }
 
-  function addHero(){
+  const addHero= function(){
     
       let name =document.querySelector('#name')
       let alias = document.querySelector('#alias')
       let superpower = document.querySelector('#superpower')
       let team = document.querySelector('#team')
       let image = document.querySelector('#imageUrl')
-
-      if(!name.value||!alias.value || !superpower.value || !team.value|| !image.value){
+      if( !image.value){
+        image ='https://i0.wp.com/elfutbolito.mx/wp-content/uploads/2019/04/image-not-found.png'
+      }
+      if(!name.value||!alias.value || !superpower.value || !team.value){
         alert('Missing required fields ')
         name.focus()
       }else{

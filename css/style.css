@@ -2,6 +2,7 @@
     --colorP: rgb(218, 7, 7);
     --colorS: rgb(0, 255, 179);
     --colorT: rgb(14, 217, 224); 
+    --colorC: rgb(150, 7, 7);
 }
 
 
@@ -39,12 +40,12 @@ h4 a:hover{
     color: var(--colorS);
     text-decoration: none;
 }
-main img{
+#superhMainLogo{
     width: 70vw;
     transition-property: transform;
     transition-duration: 0.7s;
 }
-main img:hover{
+#superhMainLogo:hover{
     transform: scale(1.2);
 }
 
@@ -95,7 +96,7 @@ header{
     color: white;
 }
 #nav-logo img{
-    width: 200px;
+    width: 20rem;
     transition-property: transform;
     transition-duration: 0.7s;
 }
@@ -108,14 +109,90 @@ nav a{
     font-size: 2rem;
 }
 th{
-    font-size: 2.5rem;
+    font-size:2.5rem;
     letter-spacing: 0.2rem;;
 }
 td{
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 0.2rem;
 }
-td img{
-    height: 250px;
+
+#hero_image{
+    max-height: 250px;
+}
+@media
+only screen and (max-width: 768px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr { 
+      border: 2px solid rgb(77, 77, 77); 
+      margin-bottom: 10px;
+}
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 200px;
+    margin-left: 150px;
+  }
+  td:before {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 180px;
+    padding-right: 50px;
+    white-space: nowrap;
+    margin-left: -150px;
+   
+  }
+  .btSize{
+      font-size: 2rem;
+     
+  }
+  td:nth-of-type(1):before { content: "Name"; }
+  td:nth-of-type(2):before { content: "Alias"; }
+  td:nth-of-type(3):before { content: "Superpower"; }
+  td:nth-of-type(4):before { content: "Team";}
+  td:nth-of-type(5):before { content: "Options";}
+}
+
+#heroModalD, #heroModalB,#heroModalCo, #heroModalF,#heroModalH,#modifModalH,#modifModalB,#modifModalF, #modifModalCo{
+  background-color: rgba(105, 0, 9, 0.986) !important;
+}
+#hero-img{
+    width: 100% ;
+   
+    margin-left: 11vw ;
+    display: block;
+    object-fit: contain
+
+}
+#heroModalB,#modifModalB{
+    margin-right: 4vw;
+}
+#text-team, #text-superpower{
+    font-size: 2.5rem;
+}
+.tags{
+    -webkit-text-stroke: 0.5px black;
+    font-size: 3rem;
+}
+#modifModalB,#modif_title{
+    font-size: 2.5rem;
+    padding:2vw
+}
+#nameModif,#superpowerModif,#teamModif,#imageModif{
+    font-size: 1.8rem;
+    opacity: 0.8;
+    
+}
+#modifBtn{
+    font-size: 2rem;
 }

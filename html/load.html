@@ -25,7 +25,12 @@
     <header id="headerH">
       <nav class="navbar navbar-expand-md navbar-dark">
         <div class="container">
-          <a class="navbar-brand font-weight-bold" id="nav-logo" href="/index.html"><img src="/img/logo.png" alt="superheroes logo"></a>
+          <a
+            class="navbar-brand font-weight-bold"
+            id="nav-logo"
+            href="/html/home.html"
+            ><img src="/img/logo.png" alt="superheroes logo"
+          /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -43,7 +48,7 @@
           >
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/index.html">Home</a>
+                <a class="nav-link" href="/html/home.html">Home</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="#">Load</a>
@@ -57,53 +62,76 @@
       </nav>
     </header>
     <main>
-      <form action="">
-        <p>
-          <label for="name">
-            <span>Hero Name:</span>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Hero's name"
-              required
-              autocomplete="name"
-            />
-          </label>
-          <br>
-          <label for="alias">
-            <span>Superhero's alias:</span>
-            <input type="text" name="alias" id="alias"  placeholder="alias"required />
-          </label>
-        </p>
-        <p>
-          <label for="superpower">
-            <span>Superpower:</span>
-            <textarea
-              name="superpower"
-              id="superpower"
-              cols="30"
-              rows="3"
-              placeholder="superpower"
-              required
-            ></textarea>
-          </label>
-        </p>
-        <p>
-          <label for="team">
-            <span>Team:</span>
-            <input type="text" name="team" id="team"  placeholder="team" required />
-          </label>
-        </p>
-        <p>
-          <label for="image">
-            <span>Insert image URL:</span>
-            <input type="text" name="image" id="imageUrl"  placeholder="Url must end in .jpg, .png, or .bmp "  required />
-          </label>
-        </p>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <form action="">
+              <p>
+                <label for="name">
+                  <span>Hero Name:</span>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Hero's name"
+                    required
+                    autocomplete="name"
+                  />
+                </label>
+                <br />
+                <label for="alias">
+                  <span>Superhero's alias:</span>
+                  <input
+                    type="text"
+                    name="alias"
+                    id="alias"
+                    placeholder="alias"
+                    required
+                  />
+                </label>
+              </p>
+              <p>
+                <label for="superpower">
+                  <span>Superpower:</span>
+                  <textarea
+                    name="superpower"
+                    id="superpower"
+                    cols="30"
+                    rows="3"
+                    placeholder="superpower"
+                    required
+                  ></textarea>
+                </label>
+              </p>
+              <p>
+                <label for="team">
+                  <span>Team:</span>
+                  <input
+                    type="text"
+                    name="team"
+                    id="team"
+                    placeholder="team"
+                    required
+                  />
+                </label>
+              </p>
+              <p>
+                <label for="image">
+                  <span>Insert image URL:</span>
+                  <input
+                    type="text"
+                    name="image"
+                    id="imageUrl"
+                    placeholder="Url must end in .jpg, .png, or .bmp "
+                  />
+                </label>
+              </p>
 
-        <button id="sendHero" onclick="addHero()">Submit Hero</button>
-      </form>
+              <button id="sendHero" onclick="addHero()">Submit Hero</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
     <footer></footer>
     <script src="/js/app_load.js"></script>

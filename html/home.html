@@ -1,0 +1,109 @@
+<!-- * Web Héroes
+Crear una web de superhéroes donde se carguen los datos de un héroe y se pueda ver en una tabla los héroes cargados.
+Los requerimientos son los siguientes:
+
+La web debe tener las siguientes páginas:
+Home (principal) con un mensaje de bienvenida
+Cargar con un formulario donde se agreguen los siguientes datos: Alias, nombre, poder, equipo, imagen(url de la imagen)
+Tabla donde muestre una tabla dinámica con los datos de los héroes (la imagen no es necesario que aparezca)
+Se debe poder navegar desde un navbar que debe estar presente en todas las páginas.
+Se puede crear un archivo js para cada página
+Los datos deben guardarse en localStorage para poder extraerlos desde allí de ser necesario. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+   
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Superheroes</title>
+  </head>
+  <body>
+    <header id="headerH">
+        <nav class="navbar navbar-expand-md navbar-dark">
+          <div class="container">
+            <a class="navbar-brand font-weight-bold" id="nav-logo" href="/html/home.html"><img src="/img/logo.png" alt="superheroes logo"></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/html/load.html">Load</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/html/table.html">Table</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+   
+    <main>
+
+        <div class="container">
+
+          <div class="row">
+            <div class="col">
+              <h2>Welcome to:</h2>
+              <img id="superhMainLogo" src="/img/logo.png" alt="Logo Superheores">
+              <h3>The right place to be if you're looking for superheroes</h3>
+              <br>
+              <h4>You will find all our superheoes in the <a href="/html/table.html">Table</a> tab</h4>
+              <h4>You can contribute to our database by adding superheroes in the <a href="/html/load.html">Load</a> tab</h4>
+            </div>
+          </div>
+        </div>
+
+    </main>
+    <footer>
+<hr>
+
+    </footer>
+
+
+    
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <script src="/js/app_index.js"></script>
+</html>
